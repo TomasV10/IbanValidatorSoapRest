@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://ibansValidator.com/IbanValidator"
+           xmlns:tns="http://ibansValidator.com/IbanValidator"
+           elementFormDefault="qualified">
+    
+    <xs:element name="ibanRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="iban" type="xs:string" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="ibanResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="iban" type="xs:string"/>
+                <xs:element name="validatedIban" type="tns:validatedIban" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="validatedIban">
+        <xs:sequence>
+            <xs:element name="iban" type="xs:string"/>
+            <xs:element name="isIbanValid" type="xs:boolean"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
