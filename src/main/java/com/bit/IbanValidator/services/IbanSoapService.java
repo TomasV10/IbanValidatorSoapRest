@@ -1,8 +1,8 @@
 package com.bit.IbanValidator.services;
 import com.bit.IbanValidator.validation.IbanValidator;
-import com.ibansvalidator.ibanvalidator.ValidatedIban;
-import com.ibansvalidator.ibanvalidator.IbanRequest;
-import com.ibansvalidator.ibanvalidator.IbanResponse;
+import com.bit.IbanValidator.generatedSources.ValidatedIban;
+import com.bit.IbanValidator.generatedSources.IbanRequest;
+import com.bit.IbanValidator.generatedSources.IbanResponse;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 
 
 @Service
-public class IbanService {
+public class IbanSoapService {
 
     public IbanResponse validateIbans(IbanRequest request){
         IbanResponse response = new IbanResponse();

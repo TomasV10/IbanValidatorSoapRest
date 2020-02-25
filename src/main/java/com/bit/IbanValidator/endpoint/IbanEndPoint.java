@@ -1,9 +1,9 @@
 package com.bit.IbanValidator.endpoint;
 
 
-import com.bit.IbanValidator.services.IbanService;
-import com.ibansvalidator.ibanvalidator.IbanRequest;
-import com.ibansvalidator.ibanvalidator.IbanResponse;
+import com.bit.IbanValidator.services.IbanSoapService;
+import com.bit.IbanValidator.generatedSources.IbanRequest;
+import com.bit.IbanValidator.generatedSources.IbanResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
@@ -14,12 +14,12 @@ import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 public class IbanEndPoint {
 
     @Autowired
-     IbanService ibanService;
+    IbanSoapService ibanSoapService;
 
     @PayloadRoot(namespace = "http://ibansValidator.com/IbanValidator",
     localPart = "ibanRequest")
     @ResponsePayload
     public IbanResponse IbanValidationRequest(@RequestPayload IbanRequest request){
-        return ibanService.validateIbans(request);
+        return ibanSoapService.validateIbans(request);
     }
 }
