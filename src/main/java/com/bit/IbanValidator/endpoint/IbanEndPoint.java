@@ -14,7 +14,7 @@ import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 public class IbanEndPoint {
 
     @Autowired
-     IbanService ibanService = new IbanService();
+     IbanService ibanService;
 
     @PayloadRoot(namespace = "http://ibansValidator.com/IbanValidator",
     localPart = "ibanRequest")
