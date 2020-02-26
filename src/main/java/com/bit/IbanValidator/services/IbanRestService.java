@@ -14,7 +14,7 @@ public class IbanRestService  {
 
     public IbanDto validateIbans(List<Iban> ibans){
         IbanDto dto = new IbanDto();
-        dto.setIbanValidateds(getValidatedIbans(ibans));
+        dto.setValidatedIbans(getValidatedIbans(ibans));
         return dto;
     }
 

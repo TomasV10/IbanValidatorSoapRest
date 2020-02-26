@@ -1,12 +1,11 @@
 package com.bit.IbanValidator.dto;
 
 import com.bit.IbanValidator.validation.IbanValidated;
-
 import java.util.List;
 
 public class IbanDto {
     private String iban;
-    private List<IbanValidated> ibanValidateds;
+    private List<IbanValidated> validatedIbans;
 
 
     public String getIban() {
@@ -17,11 +16,12 @@ public class IbanDto {
         this.iban = iban;
     }
 
-    public List<IbanValidated> getIbanValidateds() {
-        return ibanValidateds;
+    public List<IbanValidated> getValidatedIbans() {
+        return validatedIbans;
     }
 
-    public void setIbanValidateds(List<IbanValidated> ibanValidateds) {
-        this.ibanValidateds = ibanValidateds;
+    public void setValidatedIbans(List<IbanValidated> validatedIbans) {
+        this.validatedIbans = validatedIbans;
     }
+
 }

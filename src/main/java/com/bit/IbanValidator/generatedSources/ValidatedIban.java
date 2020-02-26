@@ -24,4 +24,20 @@ public class ValidatedIban {
 
     public ValidatedIban() {
     }
+
+    public String getIban() {
+        return iban;
+    }
+
+    public void setIban(String iban) {
+        this.iban = iban;
+    }
+
+    public boolean isIbanValid() {
+        return isIbanValid;
+    }
+
+    public void setIbanValid(boolean ibanValid) {
+        isIbanValid = ibanValid;
+    }
 }

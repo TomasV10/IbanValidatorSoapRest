@@ -11,4 +11,11 @@ public class Iban {
     public void setIban(String iban) {
         this.iban = iban;
     }
+
+    public Iban(String iban) {
+        this.iban = iban;
+    }
+
+    public Iban() {
+    }
 }
